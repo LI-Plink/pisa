@@ -24,7 +24,7 @@ def entrance():
             print("Nepareiza izvēle. Mēģini vēlreiz.")
 
 def foyer():
-    print("Tu ieej foajē. Ir tumšs, bet redzi durvis uz 'virtuve' un 'dzīvojamā istaba'.")
+    print("Tu ieej foajē. Ir tumšs, bet redzi durvis uz 'virtuve', 'dzīvojamā istaba' un 'pagrabu' .")
     choice = ""
     while choice not in ["virtuve", "dzīvojamā istaba"]:
         choice = input(">>> ").lower()
@@ -32,17 +32,20 @@ def foyer():
             kitchen()
         elif choice == "dzīvojamā istaba":
             living_room()
+        elif choice == "pagrabu":
+            basement()
         else:
             print("Nepareiza izvēle. Mēģini vēlreiz.")
 
 def kitchen():
-    print("Tu esi virtuvē. Tā ir biedējoša, un tu atrod rūsinātu nazi. Vai tu to 'ņem' vai atstāj 'aizvērtu'?")
+    print("Tu esi virtuvē. Tā ir biedējoša, un tu atrod rūsinātu nazi un atslēgu. Vai tu to 'ņem' vai atstāj 'aizvērtu'?")
     choice = ""
     while choice not in ["ņem", "aizvērtu"]:
         choice = input(">>> ").lower()
         if choice == "ņem":
             inventory.append("nazis")
-            print("Tu paņēmi nazi.")
+            inventory.append("atslēga")
+            print("Tu paņēmi nazi un atslēgu.")
         print("Pēkšņi parādās spoks! Vai tu vēlies 'cīnīties' vai 'bēgt'?")
         action = input(">>> ").lower()
         if action == "cīnīties":
@@ -95,3 +98,4 @@ def end_game():
 # Sāk spēli
 print("Sveicināts Piedzīvojums Spoku Mājā!")
 start_game()
+
