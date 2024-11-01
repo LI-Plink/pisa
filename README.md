@@ -1,4 +1,3 @@
-# pisa
 # Piedzīvojums Spoku Mājā
 import random
 
@@ -25,7 +24,7 @@ def entrance():
             print("Nepareiza izvēle. Mēģini vēlreiz.")
 
 def foyer():
-    print("Tu ieej foajē. Ir tumšs, bet redzi durvis uz 'virtuvi' un 'dzīvojamā istaba'.")
+    print("Tu ieej foajē. Ir tumšs, bet redzi durvis uz 'virtuve' un 'dzīvojamā istaba'.")
     choice = ""
     while choice not in ["virtuve", "dzīvojamā istaba"]:
         choice = input(">>> ").lower()
